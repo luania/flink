@@ -82,7 +82,7 @@ export class NodeComponent {
   }
 
   isValid = (value?: number): boolean => {
-    return value === undefined || value === 0 || isNaN(value);
+    return value !== undefined && !isNaN(value);
   };
 
   toRGBA = (d: string): number[] => {
